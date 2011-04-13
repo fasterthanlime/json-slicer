@@ -32,14 +32,12 @@ $(function() {
         try {
             $.parseJSON("[\"" + left + "\"]");
         } catch (err) {
-            createSelection(index - 1, index - 1 + half, document.getElementById('json'));
             sliceAndDice(left, index);
         }
         
         try {
             $.parseJSON("[\"" + right + "\"]");
         } catch (err) {
-            createSelection(index - 1, index - 1 + half, document.getElementById('json'));
             sliceAndDice(right, index + half);
         }
     }
